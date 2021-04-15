@@ -3,12 +3,19 @@
     "description": "Scavenger hunt game with Google Maps",
     "version": "0.1",
     "manifest_version": 3,
+    "permissions": [
+        "storage",
+        "tabs"
+    ],
     "content_scripts": [
         {
             "matches": ["*://www.google.com/maps/*"],
             "js": ["loadSidebar.js"]
         }
     ],
+    "background": {
+        "service_worker": "background.js"
+    },
     "web_accessible_resources": [
         {
             "resources": ["sidebar.html"],
