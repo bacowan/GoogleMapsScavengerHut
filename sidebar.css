@@ -1,0 +1,16 @@
+h1 {
+    font-size: 20px;
+    background-color: aliceblue;
+}
+
+p {
+    background-color: aliceblue;
+}
+
+.row {
+    width: 100%;
+}
+
+.row * {
+    display: inline-block;
+}
