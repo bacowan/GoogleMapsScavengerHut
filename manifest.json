@@ -11,6 +11,11 @@
         {
             "matches": ["*://www.google.com/maps/*"],
             "js": ["loadSidebar.js"]
+        },
+        {
+            "matches": ["*://www.google.com/maps/*"],
+            "js": ["manageSidebar.js"],
+            "all_frames": true
         }
     ],
     "background": {

@@ -7,6 +7,7 @@ chrome.storage.sync.get(['save'], function(result) {
     }
     else { // TODO: validate result
         data = result;
+        updateUi(data);
     }
 });
 
@@ -22,4 +23,11 @@ function resetData(lat, lon) {
 function updateData(newData) {
     Object.assign(data, newData);
     chrome.storage.sync.set({'save': data}, () => {});
+    updateUi(data);
+}
+
+function updateUi(val) {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        chrome.tabs.sendMessage(tabs[0].id, val);
+    });
 }

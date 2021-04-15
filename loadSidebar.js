@@ -1,5 +1,6 @@
 const iFrame = document.createElement("iframe");
 
+iFrame.id = "sidebar-iframe";
 iFrame.src = chrome.runtime.getURL("sidebar.html");
 iFrame.style.position = "fixed";
 iFrame.style.zIndex = 2147483647;

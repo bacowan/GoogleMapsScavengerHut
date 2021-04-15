@@ -1,1 +1,1 @@
-importScripts('dataStore.js', 'urlChanged.js');
+importScripts('dataStore.js', 'urlChanged.js', 'calculateStats.js');
