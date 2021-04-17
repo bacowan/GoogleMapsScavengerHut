@@ -1,10 +1,16 @@
-h1 {
-    font-size: 20px;
-    background-color: aliceblue;
+.background {
+    padding: 10px;
+    background-color: #007009;
+    color: aliceblue;
+    border-radius: 25px;
 }
 
 p {
-    background-color: aliceblue;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 16px;
 }
 
 .row {
