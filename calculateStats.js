@@ -1,18 +1,13 @@
-function setLatLon(lat, lon) {
-    const distance = calculateDistance(lat, lon, data.currentLat, data.currentLon);
+function setLatLon(data, currentLat, currentLon, tabId) {
+    const distance = calculateDistance(data.currentLat, data.currentLon, currentLat, currentLon);
     updateData({
         stamina: data.stamina - (distance * 100),
-        currentLat: lat,
-        currentLon: lon
-    });
+        currentLat: currentLat,
+        currentLon: currentLon
+    }, tabId);
 }
 
-function calculateDistance(previousLat, previousLon, currentLat, currentLon) {
-    /*console.log(previousLat)
-    console.log(previousLon)
-    console.log(currentLat)
-    console.log(currentLon)
-    console.log("")*/
+function calculateDistance(currentLat, currentLon, previousLat, previousLon) {
     if (previousLat == currentLat && previousLon == currentLon) {
         return 0;
     }
