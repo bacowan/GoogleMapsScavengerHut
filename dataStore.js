@@ -31,3 +31,10 @@ function updateUi(val) {
         chrome.tabs.sendMessage(tabs[0].id, val);
     });
 }
+
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    if (request.action === "new") {
+        const latLon = getLatLon(request.url);
+        resetData(latLon.currentLat, latLon.currentLon);
+    }
+});

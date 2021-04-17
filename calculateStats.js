@@ -8,6 +8,11 @@ function setLatLon(lat, lon) {
 }
 
 function calculateDistance(previousLat, previousLon, currentLat, currentLon) {
+    /*console.log(previousLat)
+    console.log(previousLon)
+    console.log(currentLat)
+    console.log(currentLon)
+    console.log("")*/
     if (previousLat == currentLat && previousLon == currentLon) {
         return 0;
     }
