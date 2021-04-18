@@ -10,7 +10,6 @@ function resetData(lat, lon, tabId=null) {
 }
 
 function updateData(newData, tabId=null) {
-    console.log(newData);
     chrome.storage.sync.get(['save'], function(data) {
         Object.assign(data.save, newData);
         chrome.storage.sync.set({'save': data.save}, () => {});

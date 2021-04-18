@@ -10,11 +10,11 @@
     "content_scripts": [
         {
             "matches": ["*://www.google.com/maps/*"],
-            "js": ["loadSidebar.js"]
+            "js": ["loadSidebar.js", "poiPaneInjection.js"]
         },
         {
             "matches": ["*://www.google.com/maps/*"],
-            "js": ["manageSidebar.js"],
+            "js": ["sidebarMessageHandling.js"],
             "all_frames": true
         }
     ],
